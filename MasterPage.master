@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Garage Manager</title>
+    <link rel="stylesheet" href="Styles/StyleSheet.css" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div id="wrapper">
+				<!--<h5> <marquee bgcolor="yellow" behavior="slide" > Call Raj On 07747035897;  </marquee></h5>-->
+                <div id="banner">
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/Images/BannerCar.jpg" Width="100%" />
+					
+              </div>
+				
+                <div id="navigation">
+                    <ul id="nav">
+                        <li>
+                            <asp:HyperLink runat="server" NavigateUrl="~/Index.aspx">Webshop</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink runat="server" NavigateUrl="~/Pages/About.aspx">About us</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink runat="server">Reports</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink runat="server" NavigateUrl="~/Pages/Management/Management.aspx">Management</asp:HyperLink></li>
+
+                        <li style="float: right">
+                            <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Pages/Account/Register.aspx">Register</asp:HyperLink>
+                            <asp:Literal ID="litStatus" runat="server" />
+                        </li>
+                        <li style="float: right">
+                            <asp:HyperLink ID="LnkLogIn" runat="server" NavigateUrl="~/Pages/Account/Login.aspx">Log in</asp:HyperLink>
+                            <asp:LinkButton ID="btnLogOut" runat="server" Text="Log out" OnClick="lnkLogOut_Click" />
+                        </li>
+                    </ul>
+                </div>
+				<!--<h5> <marquee bgcolor="yellow" behavior="slide" > Call Raj On 07747035897;  </marquee></h5>-->
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
+ 
